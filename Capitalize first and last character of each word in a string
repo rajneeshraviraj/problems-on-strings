@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+void capiatalize(string str,int size){
+    for(int i=0;i<size;i++){
+        if(i==0 || i==(size-1)){
+            str[i]=towupper(str[i]);
+        }
+        else if( str[i] ==  ' '){
+            str[i-1]=towupper(str[i-1]);
+            str[i+1]=towupper(str[i+1]);
+        }
+    }
+    cout<<"after capitalizing:"<<endl;
+    cout<<str;
+}
+int main(){
+    string str="rajneesh ravi raj";
+    int size= str.length();
+    capiatalize(str,size);
+    return 0;
+}
