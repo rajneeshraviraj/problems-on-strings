@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sumofIntegers(string str){
+    int sum=0;
+    int num=0;
+    for(char c:str){
+        if(isdigit(c)){
+            num=num*10+(c-'0');
+        }
+        else{
+          sum=sum+num;  
+          num=0;
+        }}
+        sum=sum+num;
+    return sum;
+}
+int main(){
+    string str="1da2134a6";
+    cout<<"sum of given string"<<sumofIntegers(str)<<endl;
+    return 0;
+}
