@@ -1,0 +1,43 @@
+#include <iostream>
+#include <unordered_map>
+#include <string>
+using namespace std;
+
+void findNonRepeating(const string &str) {
+    unordered_map<char, int> freq; 
+    for (char ch : str) {
+        freq[ch]++;
+    }
+
+    
+    for (char ch : str) {
+        if (freq[ch] == 1) { 
+            cout << ch << " ";
+        }
+    }
+    cout << endl;
+}
+
+int main() {
+    string str = "Takeuforward";
+    cout << "Non-repeating characters: ";
+    findNonRepeating(str);
+
+    
+    cout << "Test case 1: ";
+    findNonRepeating("aabbcc"); 
+
+    cout << "Test case 2: ";
+    findNonRepeating("abcdef"); 
+
+    cout << "Test case 3: ";
+    findNonRepeating("AaBbCc"); 
+
+    cout << "Test case 4: ";
+    findNonRepeating("hello world!"); 
+
+    cout << "Test case 5: ";
+    findNonRepeating("abc123abc"); 
+
+    return 0;
+}
